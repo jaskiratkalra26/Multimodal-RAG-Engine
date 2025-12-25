@@ -5,6 +5,7 @@ from tqdm import tqdm
 from .embedding_engine import EmbeddingEngine
 from .caption_engine import CaptionEngine
 from .schema import EmbeddingData
+from .Config import Config
 
 def process_file(input_path: str, output_path: str):
     print(f"Processing {input_path} -> {output_path}")
@@ -45,10 +46,17 @@ def process_file(input_path: str, output_path: str):
             if isinstance(image_info, str):
                 image_path = image_info
             elif isinstance(image_info, dict):
-                image_path = image_info.get("path") or image_info.get("image_path")
+                image_path = image_info.get("path") or image_info.get("image_path") or image_info.get("filename")
             else:
                 continue
             
+            if image_path:
+                 # Try to resolve full path if it's just a filename
+                if not os.path.exists(image_path):
+                     potential_path = os.path.join(Config.EXTRACTED_IMAGES_DIR, os.path.basename(image_path))
+                     if os.path.exists(potential_path):
+                         image_path = potential_path
+
             if image_path and os.path.exists(image_path):
                 # Generate Caption
                 caption = caption_engine.generate_caption(image_path)
