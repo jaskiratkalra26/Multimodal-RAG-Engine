@@ -1,0 +1,45 @@
+[
+    {
+        "chunk_id": "1bd0b643-6365-488a-a870-02d762fad47d",
+        "text": "Service Schedule The following table lists recommended service intervals for industrial motors. Component Inspection Interval Replacement Interval Motor Belt 3 Months 12 Months Bearings 6 Months 24 Months Wiring 6 Months As Needed",
+        "metadata": {
+            "page_no": 1,
+            "chunk_id": "1bd0b643-6365-488a-a870-02d762fad47d",
+            "section_hierarchy": [],
+            "bbox": [
+                78.0,
+                76.73999786376953,
+                423.2977600097656,
+                217.99000549316406
+            ],
+            "object_type": "text",
+            "source_pdf_name": "TestPDF_2_Text_Table.pdf",
+            "caption": null
+        },
+        "images": [],
+        "tables": [
+            [
+                [
+                    "Component",
+                    "Inspection Interval",
+                    "Replacement Interval"
+                ],
+                [
+                    "Motor Belt",
+                    "3 Months",
+                    "12 Months"
+                ],
+                [
+                    "Bearings",
+                    "6 Months",
+                    "24 Months"
+                ],
+                [
+                    "Wiring",
+                    "6 Months",
+                    "As Needed"
+                ]
+            ]
+        ]
+    }
+]
